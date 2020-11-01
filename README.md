@@ -1,3 +1,11 @@
+# Alternitive Lego Advent Calendar
+
+This is a project that was inspired for a Lego advent calendar I created for my son a couple of years ago. At that point I split a Lego set down into a few section per day and printed of the relevent instruction sections for my son to build each day.
+
+This year I desided to do the samething again, but this time using my new skills to create a simple app that will show him the sections to build for that day. It will also not let him view any days untill it is that day or has passed.
+
+Built with ReactJS and hosted in a Docker container running on my server at home. The app will be available for him to use on a tablet.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
