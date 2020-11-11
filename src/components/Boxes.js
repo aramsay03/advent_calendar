@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import data from '../config.json';
-import DayBox from './DayBox'
+import DayBox from './DayBox';
+import classes from './Boxes.module.css';
 
 class Boxes extends Component {
     constructor(props) {
@@ -11,12 +12,14 @@ class Boxes extends Component {
     }
     render() {
         const daysNode = this.state.data.days.map(day => {
+            let randomNum = Math.floor(Math.random() * 6 + 1);
+            const boxImage = `../images/gift${randomNum}.png`;
             return (
-                <DayBox key={day.id} day={day.folder} sections={day.numberOfSections} />
+                <DayBox day={day.day} folder={day.folder} sections={day.numberOfSections} opened={day.opened} boxImgURL={boxImage} />
             )
         })
         return (
-            <section>
+            <section className={classes.boxesSection}>
                 <ul>
                     {daysNode}
                 </ul>

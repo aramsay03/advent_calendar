@@ -1,0 +1,16 @@
+.giftbox {
+    height: 175px;
+    width: 150px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.giftbox h1 {
+    align-items: center;
+    color: black;
+    font-weight: 900;
+}
+
+.list {
+    list-style: none;
+}

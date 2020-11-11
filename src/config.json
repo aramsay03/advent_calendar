@@ -1,10 +1,12 @@
 {
 "childsName":"Jack",
+"year":"2020",
 "days":[
     {
         "id":1,
         "Date":"UTCFormat?",
         "folder":"day1",
+        "day":"1st",
         "numberOfSections":"5",
         "opened":false
     },
@@ -12,6 +14,7 @@
         "id":2,
         "Date":"UTCFormat?",
         "folder":"day2",
+        "day":"2nd",
         "numberOfSections":"7",
         "opened":false
     },
@@ -19,6 +22,7 @@
         "id":3,
         "Date":"UTCFormat?",
         "folder":"day3",
+        "day":"3rd",
         "numberOfSections":"5",
         "opened":false
     },
@@ -26,6 +30,7 @@
         "id":4,
         "Date":"UTCFormat?",
         "folder":"day4",
+        "day":"4th",
         "numberOfSections":"5",
         "opened":false
     },
@@ -33,6 +38,7 @@
         "id":5,
         "Date":"UTCFormat?",
         "folder":"day5",
+        "day":"5th",
         "numberOfSections":"5",
         "opened":false
     },
@@ -40,6 +46,7 @@
         "id":6,
         "Date":"UTCFormat?",
         "folder":"day6",
+        "day":"6th",
         "numberOfSections":"5",
         "opened":false
     },
@@ -47,6 +54,7 @@
         "id":7,
         "Date":"UTCFormat?",
         "folder":"day7",
+        "day":"7th",
         "numberOfSections":"5",
         "opened":false
     },
@@ -54,6 +62,7 @@
         "id":8,
         "Date":"UTCFormat?",
         "folder":"day8",
+        "day":"8th",
         "numberOfSections":"5",
         "opened":false
     },
@@ -61,6 +70,7 @@
         "id":9,
         "Date":"UTCFormat?",
         "folder":"day9",
+        "day":"9th",
         "numberOfSections":"8",
         "opened":false
     },
@@ -68,6 +78,7 @@
         "id":10,
         "Date":"UTCFormat?",
         "folder":"day10",
+        "day":"10th",
         "numberOfSections":"5",
         "opened":false
     },
@@ -75,6 +86,7 @@
         "id":11,
         "Date":"UTCFormat?",
         "folder":"day11",
+        "day":"11th",
         "numberOfSections":"5",
         "opened":false
     },
@@ -82,6 +94,7 @@
         "id":12,
         "Date":"UTCFormat?",
         "folder":"day12",
+        "day":"12th",
         "numberOfSections":"5",
         "opened":false
     },
@@ -89,6 +102,7 @@
         "id":13,
         "Date":"UTCFormat?",
         "folder":"day13",
+        "day":"13th",
         "numberOfSections":"5",
         "opened":false
     },
@@ -96,6 +110,7 @@
         "id":14,
         "Date":"UTCFormat?",
         "folder":"day14",
+        "day":"14th",
         "numberOfSections":"5",
         "opened":false
     },
@@ -103,6 +118,7 @@
         "id":15,
         "Date":"UTCFormat?",
         "folder":"day15",
+        "day":"15th",
         "numberOfSections":"5",
         "opened":false
     },
@@ -110,6 +126,7 @@
         "id":16,
         "Date":"UTCFormat?",
         "folder":"day16",
+        "day":"16th",
         "numberOfSections":"4",
         "opened":false
     },
@@ -117,6 +134,7 @@
         "id":17,
         "Date":"UTCFormat?",
         "folder":"day17",
+        "day":"17th",
         "numberOfSections":"4",
         "opened":false
     },
@@ -124,6 +142,7 @@
         "id":18,
         "Date":"UTCFormat?",
         "folder":"day18",
+        "day":"18th",
         "numberOfSections":"5",
         "opened":false
     },
@@ -131,6 +150,7 @@
         "id":19,
         "Date":"UTCFormat?",
         "folder":"day19",
+        "day":"19th",
         "numberOfSections":"5",
         "opened":false
     },
@@ -138,6 +158,7 @@
         "id":20,
         "Date":"UTCFormat?",
         "folder":"day20",
+        "day":"20th",
         "numberOfSections":"5",
         "opened":false
     },
@@ -145,6 +166,7 @@
         "id":21,
         "Date":"UTCFormat?",
         "folder":"day21",
+        "day":"21st",
         "numberOfSections":"6",
         "opened":false
     },
@@ -152,6 +174,7 @@
         "id":22,
         "Date":"UTCFormat?",
         "folder":"day22",
+        "day":"22nd",
         "numberOfSections":"5",
         "opened":false
     },
@@ -159,6 +182,7 @@
         "id":23,
         "Date":"UTCFormat?",
         "folder":"day23",
+        "day":"23rd",
         "numberOfSections":"5",
         "opened":false
     },
@@ -166,6 +190,7 @@
         "id":24,
         "Date":"UTCFormat?",
         "folder":"day24",
+        "day":"24th",
         "numberOfSections":"25",
         "opened":false
     }

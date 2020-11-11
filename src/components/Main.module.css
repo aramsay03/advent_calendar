@@ -1,0 +1,10 @@
+.mainContainer {
+    display: grid;
+    justify-content: center;
+    /* justify-items: center; */
+}
+
+.mainContainer header {
+    justify-content: center;
+}
+
