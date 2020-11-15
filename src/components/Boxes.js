@@ -1,31 +1,29 @@
-import React, { Component } from 'react';
-import data from '../config.json';
+import React from 'react';
 import DayBox from './DayBox';
 import classes from './Boxes.module.css';
 
-class Boxes extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            data,            
-        }
-    }
-    render() {
-        const daysNode = this.state.data.days.map(day => {
-            let randomNum = Math.floor(Math.random() * 6 + 1);
-            const boxImage = `../images/gift${randomNum}.png`;
-            return (
-                <DayBox day={day.day} folder={day.folder} sections={day.numberOfSections} opened={day.opened} boxImgURL={boxImage} />
-            )
-        })
+const Boxes = ({ everydaysdata, handelSelectedDay }) => {
+    
+    const daysNode = everydaysdata.map(daysdata => {
+        let randomNum = Math.floor(Math.random() * 6 + 1);
+        const boxImage = `../images/gift${randomNum}.png`;
+
         return (
-            <section className={classes.boxesSection}>
-                <ul>
-                    {daysNode}
-                </ul>
-            </section>
-        );
-    }
+            <DayBox
+                key={daysdata.id}
+                daysdata={daysdata}
+                boxImgURL={boxImage}
+                handelSelectedDay={handelSelectedDay}
+            />
+        )
+    })
+    return (
+        <section className={classes.boxesSection}>
+            <ul>
+                {daysNode}
+            </ul>
+        </section>
+    );
 }
  
 export default Boxes;

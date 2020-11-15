@@ -1,24 +1,25 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import classes from './DayBox.module.css';
 
-class DayBox extends Component {
-    render() {
-        // let randomNum = Math.floor(Math.random() * 6 + 1);
-        // const Background = `../images/gift1.png`;
-        var sectionStyle = {            
-            backgroundImage: `url(${this.props.boxImgURL})`
-        };
-        return (
-            <li className={classes.list}>
-            <div className={classes.giftbox} style={ sectionStyle }>
-                <h1>{this.props.day}</h1>
-                {/* <p>{this.props.folder}</p> */}
-                {/* <p>{this.props.sections}</p> */}
-                {/* <p>{this.props.boxImgURL}</p> */}
-            </div>
-            </li>
-        );
+const DayBox = ({ daysdata, boxImgURL, handelSelectedDay }) => {
+
+    // let randomNum = Math.floor(Math.random() * 6 + 1);
+    // const Background = `../images/gift1.png`;
+    let sectionStyle = {            
+        backgroundImage: `url(${boxImgURL})`
     }
+    let pageURL = '/instructions'
+    
+    return (
+        <li className={classes.list}>
+        <Link to={pageURL} daysData={daysdata} onClick={() => handelSelectedDay(daysdata)}>
+            <div className={classes.giftbox} style={ sectionStyle }>
+                <h1>{daysdata.day}</h1>
+            </div>
+        </Link>
+        </li>
+    );
 }
  
 export default DayBox;
