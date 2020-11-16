@@ -17,11 +17,14 @@ const DayBox = ({ daysdata, boxImgURL, currentDate, handleSelectedDay }) => {
     const [pageURL, setPageURL] = useState(startPageURL);
 
     useEffect(() => {
-        if ( moment(boxDate).isSameOrBefore(currentDate) === true ) {
-            return null;
-        } else {
-            setPageURL('/')
+        const checkDay = () => {
+            if ( moment(boxDate).isSameOrBefore(currentDate) === true ) {
+                return null;
+            } else {
+                setPageURL('/')
+            }
         }
+        checkDay();
     });
 
     const giftBox = (
