@@ -2,7 +2,7 @@ import React from 'react';
 import DayBox from './DayBox';
 import classes from './Boxes.module.css';
 
-const Boxes = ({ everydaysdata, handelSelectedDay }) => {
+const Boxes = ({ everydaysdata, currentDate, handleSelectedDay }) => {
     
     const daysNode = everydaysdata.map(daysdata => {
         let randomNum = Math.floor(Math.random() * 6 + 1);
@@ -13,7 +13,8 @@ const Boxes = ({ everydaysdata, handelSelectedDay }) => {
                 key={daysdata.id}
                 daysdata={daysdata}
                 boxImgURL={boxImage}
-                handelSelectedDay={handelSelectedDay}
+                currentDate={currentDate}
+                handleSelectedDay={handleSelectedDay}
             />
         )
     })

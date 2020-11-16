@@ -3,24 +3,25 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import config from '../config.json';
 import Instructions from './Instructions';
 import Boxes from './Boxes';
+import monent from 'moment';
 
 class Main extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            // currentDate: null,
+            currentDate: monent().format("D MMM YYYY"),
             // childsName: config.childsName,
             // year: config.year,
             everydaysdata: config.days,
             selectedDay: []
         }
 
-        this.handelSelectedDay = this.handelSelectedDay.bind(this);
+        this.handleSelectedDay = this.handleSelectedDay.bind(this);
     }
 
-    handelSelectedDay = payload => {
+    handleSelectedDay = payload => {
         this.setState( { selectedDay: payload } );
-    }
+    };
 
     render() {
          
@@ -29,7 +30,7 @@ class Main extends Component {
                 <div>
                     <Router>
                         <Route exact path="/">
-                            <Boxes key={this.state.everydaysdata.id} everydaysdata={this.state.everydaysdata} handelSelectedDay={this.handelSelectedDay} />
+                            <Boxes key={this.state.everydaysdata.id} everydaysdata={this.state.everydaysdata} currentDate={this.state.currentDate} handleSelectedDay={this.handleSelectedDay} />
                         </Route>
                         <Route path="/instructions">
                             <Instructions selectedDay={this.state.selectedDay} />

@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import { Link, Redirect, Route } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import classes from './Instructions.module.css';
 
 const Instructions = ({ selectedDay }) => {
 
-    // Need to add back button
-        // If statement for when section is 1 (return to home page)
-    // Need to create next button
-        // If statement for when section is at last for that day (return to home page)
+    // Need to add back button - Done
+        // If statement for when section is 1 (return to home page) - Done
+    // Need to create next button - Done
+        // If statement for when section is at last for that day (return to home page) - Done
 
     const [section, setSection] = useState(1);
     const imageURL = `./images/instructions/${selectedDay.folder}/${selectedDay.folder}-${section}.png`;
