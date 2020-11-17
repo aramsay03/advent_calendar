@@ -13,14 +13,20 @@ class Main extends Component {
             // childsName: config.childsName,
             // year: config.year,
             everydaysdata: config.days,
-            selectedDay: []
+            selectedDay: [],
+            currentDayOpened: false
         }
 
         this.handleSelectedDay = this.handleSelectedDay.bind(this);
+        this.handleCurrentDayOpened = this.handleCurrentDayOpened.bind(this);
     }
 
     handleSelectedDay = payload => {
         this.setState( { selectedDay: payload } );
+    };
+
+    handleCurrentDayOpened = () => {
+        this.setState( { currentDayOpened: true });
     };
 
     render() {
@@ -33,7 +39,7 @@ class Main extends Component {
                             <Boxes key={this.state.everydaysdata.id} everydaysdata={this.state.everydaysdata} currentDate={this.state.currentDate} handleSelectedDay={this.handleSelectedDay} />
                         </Route>
                         <Route path="/instructions">
-                            <Instructions selectedDay={this.state.selectedDay} />
+                            <Instructions selectedDay={this.state.selectedDay} markAsOpened={this.handleCurrentDayOpened} />
                         </Route>
                     </Router>
                 </div>

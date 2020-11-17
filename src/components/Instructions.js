@@ -2,22 +2,23 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import classes from './Instructions.module.css';
 
-const Instructions = ({ selectedDay }) => {
+const Instructions = ({ selectedDay, markAsOpened }) => {
 
     // Need to add back button - Done
         // If statement for when section is 1 (return to home page) - Done
     // Need to create next button - Done
         // If statement for when section is at last for that day (return to home page) - Done
+    // Create function to mark day as opened - Done
 
     const [section, setSection] = useState(1);
     const imageURL = `./images/instructions/${selectedDay.folder}/${selectedDay.folder}-${section}.png`;
 
     const backSection = () => {
-        setSection(section - 1)
+        setSection(section - 1);
     }
 
     const nextSection = () => {
-        setSection(section + 1)
+        setSection(section + 1);
     }
 
     const backButtonClick = (
@@ -39,7 +40,7 @@ const Instructions = ({ selectedDay }) => {
     );
 
     const nextButton = (
-        <button>
+        <button onClick={markAsOpened}>
             Next
         </button>
     );
@@ -54,9 +55,6 @@ const Instructions = ({ selectedDay }) => {
 
     return (
         <section className={classes.instructionsContainer}>
-            {/* <div>
-                <button onClick={this.backPage}>{this.nextPage}</button>
-            </div> */}
             <div>
                 <h1>Section {section} of {selectedDay.numberOfSections}</h1>
                 <p>{selectedDay.folder}</p>
