@@ -55,12 +55,14 @@ const Instructions = ({ selectedDay, markAsOpened }) => {
 
     return (
         <section className={classes.instructionsContainer}>
-            <div>
+            <div className={classes.imageHeader}>
                 <h1>Section {section} of {selectedDay.numberOfSections}</h1>
-                <p>{selectedDay.folder}</p>
-                <img className={classes.imageSection} src={imageURL} alt="InstructionImage" />
+                {/* <p>{selectedDay.folder}</p> */}
             </div>
-            <div>
+            <div className={classes.imageSection}>
+                <img src={imageURL} alt="InstructionImage" />
+            </div>
+            <div className={classes.navButtons}>
                 <ConditionalLinkBack />
                 <ConditionalLinkNext />
             </div>
