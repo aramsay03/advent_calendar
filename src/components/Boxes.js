@@ -5,7 +5,7 @@ import classes from './Boxes.module.css';
 const Boxes = ({ everydaysdata, currentDate, handleSelectedDay }) => {
     
     const daysNode = everydaysdata.map(daysdata => {
-        let randomNum = Math.floor(Math.random() * 6 + 1);
+        let randomNum = Math.floor(Math.random() * 10 + 1);
         const boxImage = `../images/gift${randomNum}.png`;
 
         return (
