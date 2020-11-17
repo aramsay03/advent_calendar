@@ -1,19 +1,25 @@
 import React from 'react';
 import classes from './Header.module.css';
+import moment from 'moment';
 
-export default function Header(props) {
+const Header = (props) => {
+
+    const currentDate = moment().format("Do MMM")
 
     return (
-        <div className={classes.appHeader} >
+        <header className={classes.appHeader} >
             <div className={classes.date}>
-                <h2>1st Dec</h2>
+                <h2>{currentDate}</h2>
             </div>
             <div className={classes.title}>
-                <h1>{ props.childsName }'s Lego Christmas Advent Calendar { props.year }</h1>
+                <h1>{ props.childsName }'s Lego Christmas Advent Calendar</h1>
             </div>
             <div className={classes.nav}>
-                <button>Back</button>
+                <h2>{ props.year }</h2>
+                {/* <img src={santaLogo} /> */}
             </div>
-        </div>
+        </header>
     )
 }
+
+export default Header;

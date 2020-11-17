@@ -1,11 +1,36 @@
 .appHeader {
     color: snow;
-    display: flex;
-    flex-direction: row;
-    justify-self: space-around;
+    display: grid;
+    grid-template-columns: 1fr 65% 1fr;
+    /* height: 4em; */
+    padding: 1.5em;
+    /* flex-direction: row; */
+    /* justify-self: space-between; */
 }
 
 .date {
-    color: rgb(199, 7, 7);
-    justify-self: flex-start;
+    color: red;
+    padding-left: 20px;
+    text-align: center;
 }
+
+.nav {
+    padding-right: 20px;
+    color: red;
+    text-align: center;
+}
+
+.title {
+    text-align: center;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 30px;
+}
+
+h2 {
+    font-weight: 800;
+    font-size: 30px;
+}
+

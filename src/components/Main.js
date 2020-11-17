@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import config from '../config.json';
+import Header from './Header';
 import Instructions from './Instructions';
 import Boxes from './Boxes';
 import monent from 'moment';
@@ -11,8 +12,8 @@ class Main extends Component {
         super(props);
         this.state = {
             currentDate: monent().format("D MMM YYYY"),
-            // childsName: config.childsName,
-            // year: config.year,
+            childsName: config.childsName,
+            year: config.year,
             everydaysdata: config.days,
             selectedDay: [],
             currentDayOpened: false
@@ -35,6 +36,7 @@ class Main extends Component {
         return (
             <Router>
                 <div className={classes.mainContainer}>
+                        <Header year={this.state.year} childsName={this.state.childsName} />
                     <Router>
                         <Route exact path="/">
                             <Boxes key={this.state.everydaysdata.id} everydaysdata={this.state.everydaysdata} currentDate={this.state.currentDate} handleSelectedDay={this.handleSelectedDay} />
