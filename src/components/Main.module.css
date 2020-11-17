@@ -1,5 +1,7 @@
 .mainContainer {
-    display: grid;
+    position: relative;
+    width: 100%;
+    display: flex;
     justify-content: center;
     /* justify-items: center; */
 }

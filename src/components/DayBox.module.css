@@ -1,16 +1,26 @@
 .giftbox {
     height: 175px;
-    width: 150px;
+    width: 142px;
     background-size: contain;
     background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .giftbox h1 {
-    align-items: center;
+    /* align-content: center; */
+    /* text-align: center; */
     color: black;
     font-weight: 900;
+    font-size: 40px;
+    text-decoration: none;
 }
 
 .list {
     list-style: none;
+}
+
+.link {
+    text-decoration: none;
 }

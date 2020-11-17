@@ -11,9 +11,7 @@ const BackgroundVideo = () => {
             </video>
 
             <div className={classes.Content}>
-                <div className={classes.SubContent} >
-                    <Main className={classes.Main} />
-                </div>
+                <Main className={classes.Main} />
             </div>
         </div>
     )

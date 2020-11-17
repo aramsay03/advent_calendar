@@ -72,7 +72,7 @@ const DayBox = ({ daysdata, boxImgURL, currentDate, handleSelectedDay }) => {
         <li className={classes.list}>
             {/* {ConditionalLinkDayBox} */}
             {/* {openBox} */}
-            <Link to={pageURL} daysdata={daysdata} onClick={() => handleSelectedDay(daysdata)}>
+            <Link className={classes.link} to={pageURL} daysdata={daysdata} onClick={() => handleSelectedDay(daysdata)}>
                 {giftBox}
                 {/* <div className={classes.giftbox} style={ sectionStyle }>
                     <h1>{daysdata.day}</h1>

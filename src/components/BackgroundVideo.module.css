@@ -3,9 +3,10 @@
     min-height: 300px;
     /* max-height: 800px; */
     /* overflow: hidden; */
-    /* height: 100vh; */
+    height: 100vh;
     width: 100vw;
     /* margin-bottom: 500px; */
+    /* background-position-y: top; */
 }
 
 /* Style the video: 100% width and height to cover the entire window */
@@ -26,27 +27,10 @@
     justify-content: center;
     align-items: flex-start;
     padding: 0;
+    z-index: 2;
   }
-  .SubContent {
-      text-align: center;
-      padding: 10px;
-    }
-  /* .SubContent p {
-      color: #eeeeeead;
-      font-size: 1.3rem;
+
+  /* .Main {
+    position: ;
   } */
-  .SubContent button {
-      font-weight: bold;
-      margin-top: 30px;
-      color: #f1f1f1;
-      border: #f1f1f1 1px solid;
-      padding: 10px 5px;
-      background-color: hsla(0, 0%, 0%, 0);
-      font-size: 1.25rem;
-      border-radius: 5px;
-  }
-  .SubContent button:hover {
-      background-color: #f1f1f1;
-      color: #000000c0;
-  }
 

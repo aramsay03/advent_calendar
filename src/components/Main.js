@@ -4,6 +4,7 @@ import config from '../config.json';
 import Instructions from './Instructions';
 import Boxes from './Boxes';
 import monent from 'moment';
+import classes from './Main.module.css';
 
 class Main extends Component {
     constructor(props) {
@@ -33,7 +34,7 @@ class Main extends Component {
          
         return (
             <Router>
-                <div>
+                <div className={classes.mainContainer}>
                     <Router>
                         <Route exact path="/">
                             <Boxes key={this.state.everydaysdata.id} everydaysdata={this.state.everydaysdata} currentDate={this.state.currentDate} handleSelectedDay={this.handleSelectedDay} />
