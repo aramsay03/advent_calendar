@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import classes from './DayBox.module.css';
 import moment from 'moment';
 
-const DayBox = ({ daysdata, boxImgURL, currentDate, handleSelectedDay }) => {
+const DayBox = ({ daysdata, boxImgURL, currentDate, handleSelectedDay, togglePopup }) => {
 
     // let randomNum = Math.floor(Math.random() * 6 + 1);
     // const Background = `../images/gift1.png`;
@@ -21,7 +21,7 @@ const DayBox = ({ daysdata, boxImgURL, currentDate, handleSelectedDay }) => {
             if ( moment(boxDate).isSameOrBefore(currentDate) === true ) {
                 return null;
             } else {
-                setPageURL('/')
+                setPageURL('/');
             }
         }
         checkDay();
@@ -72,7 +72,7 @@ const DayBox = ({ daysdata, boxImgURL, currentDate, handleSelectedDay }) => {
         <li className={classes.list}>
             {/* {ConditionalLinkDayBox} */}
             {/* {openBox} */}
-            <Link className={classes.link} to={pageURL} daysdata={daysdata} onClick={() => handleSelectedDay(daysdata)}>
+            <Link className={classes.link} to={pageURL} daysdata={daysdata} onClick={() => handleSelectedDay(daysdata) }>
                 {giftBox}
                 {/* <div className={classes.giftbox} style={ sectionStyle }>
                     <h1>{daysdata.day}</h1>

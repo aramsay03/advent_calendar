@@ -1,5 +1,5 @@
 .instructionsContainer {
-    position: relative;
+    /* position: relative; */
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -13,7 +13,8 @@
     padding: 2em;
 }
 
-.imageSection {
+.imageSection img {
+    width: 400px;
 
 }
 

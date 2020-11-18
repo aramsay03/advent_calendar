@@ -1,0 +1,28 @@
+.popup {  
+    position: fixed;  
+    width: 100%;  
+    height: 100%;  
+    top: 0;  
+    left: 0;  
+    right: 0;  
+    bottom: 0;  
+    margin: auto;  
+    background-color: rgba(0, 0, 0, 0.171);  
+  }  
+  .popupInner {  
+    position: absolute;  
+    left: 20%;  
+    right: 20%;  
+    top: 20%;  
+    bottom: 20%;  
+    margin: auto;  
+    border-radius: 20px;
+    border: 5px red solid; 
+    background: rgba(255, 255, 255, 0.705);
+    text-align: center;
+    padding-top: 15%;
+  }
+
+  .popupInner button {
+    float: bottom;
+  }

@@ -4,30 +4,46 @@ import config from '../config.json';
 import Header from './Header';
 import Instructions from './Instructions';
 import Boxes from './Boxes';
-import monent from 'moment';
+import moment from 'moment';
 import classes from './Main.module.css';
+import Popup from './PopUp';
 
 class Main extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            currentDate: monent().format("D MMM YYYY"),
+            currentDate: moment().format("D MMM YYYY"),
             childsName: config.childsName,
             year: config.year,
             everydaysdata: config.days,
             selectedDay: [],
-            currentDayOpened: false
+            currentDayOpened: false,
+            popupMessage: 'You will need to wait for that day',
+            showPopup: false
         }
 
         this.handleSelectedDay = this.handleSelectedDay.bind(this);
         this.handleCurrentDayOpened = this.handleCurrentDayOpened.bind(this);
+        this.togglePopup = this.togglePopup.bind(this);
     }
 
+    togglePopup = () => {  
+        this.setState({ showPopup: !this.state.showPopup });  
+    };
+
     handleSelectedDay = payload => {
-        this.setState( { selectedDay: payload } );
+        const boxDate = payload.Date;
+        if ( moment(boxDate).isSameOrBefore(this.state.currentDate) === false ) {
+            this.setState( { popupMessage: 'You will need to wait for that day' } );
+            this.togglePopup();
+        } else {
+            this.setState( { selectedDay: payload } );
+        }
     };
 
     handleCurrentDayOpened = () => {
+        this.setState( { popupMessage: 'Well done, Come back tomorrow to build some more'})
+        this.togglePopup();
         this.setState( { currentDayOpened: true });
     };
 
@@ -39,7 +55,14 @@ class Main extends Component {
                         <Header year={this.state.year} childsName={this.state.childsName} />
                     <Router>
                         <Route exact path="/">
-                            <Boxes key={this.state.everydaysdata.id} everydaysdata={this.state.everydaysdata} currentDate={this.state.currentDate} handleSelectedDay={this.handleSelectedDay} />
+                            <Boxes key={this.state.everydaysdata.id} everydaysdata={this.state.everydaysdata} currentDate={this.state.currentDate} handleSelectedDay={this.handleSelectedDay} togglePopup={this.togglePopup.bind(this) } />
+                            {this.state.showPopup ?  
+                                <Popup  
+                                    text={this.state.popupMessage}  
+                                    closePopup={this.togglePopup}  
+                                />  
+                                : null  
+                            }
                         </Route>
                         <Route path="/instructions">
                             <Instructions selectedDay={this.state.selectedDay} markAsOpened={this.handleCurrentDayOpened} />
