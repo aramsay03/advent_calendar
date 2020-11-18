@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import classes from './DayBox.module.css';
 import moment from 'moment';
 
-const DayBox = ({ daysdata, boxImgURL, currentDate, handleSelectedDay, togglePopup }) => {
+const DayBox = ({ daysdata, boxImgURL, currentDate, handleSelectedDay, currentDayOpened }) => {
 
     let sectionStyle = {            
         backgroundImage: `url(${boxImgURL})`
@@ -14,7 +14,14 @@ const DayBox = ({ daysdata, boxImgURL, currentDate, handleSelectedDay, togglePop
 
     const [pageURL, setPageURL] = useState(startPageURL);
 
+    const [pastDayCSS, setPastDayCSS] = useState(classes.box) 
+
     useEffect(() => {
+        const setStyling = () => {
+            if ( moment(boxDate).isBefore(currentDate) === true || currentDayOpened === true ) {
+                setPastDayCSS(classes.boxOpened);
+            }
+        }
         const checkDay = () => {
             if ( moment(boxDate).isSameOrBefore(currentDate) === true ) {
                 return null;
@@ -22,11 +29,12 @@ const DayBox = ({ daysdata, boxImgURL, currentDate, handleSelectedDay, togglePop
                 setPageURL('/');
             }
         }
+        setStyling();
         checkDay();
     });
 
     const giftBox = (
-        <div className={classes.giftbox} style={ sectionStyle }>
+        <div className={pastDayCSS} style={ sectionStyle }>
             <h1>{daysdata.day}</h1>
         </div>
     )
@@ -41,3 +49,11 @@ const DayBox = ({ daysdata, boxImgURL, currentDate, handleSelectedDay, togglePop
 }
  
 export default DayBox;
+
+// {this.state.showPopup ?  
+//     <Popup  
+//         text={this.state.popupMessage}  
+//         closePopup={this.togglePopup}  
+//     />  
+//     : null  
+// }

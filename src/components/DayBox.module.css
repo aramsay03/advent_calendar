@@ -1,4 +1,4 @@
-.giftbox {
+.box {
     height: 175px;
     width: 142px;
     background-size: contain;
@@ -8,10 +8,30 @@
     justify-content: center;
 }
 
-.giftbox h1 {
+.boxOpened {
+    height: 175px;
+    width: 142px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 5px red solid; */
+}
+
+.box h1 {
     /* align-content: center; */
     /* text-align: center; */
-    color: black;
+    color: red;
+    font-weight: 900;
+    font-size: 40px;
+    text-decoration: none;
+}
+
+.boxOpened h1 {
+    /* align-content: center; */
+    /* text-align: center; */
+    color: grey;
     font-weight: 900;
     font-size: 40px;
     text-decoration: none;

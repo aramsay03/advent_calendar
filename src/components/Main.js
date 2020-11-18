@@ -55,7 +55,7 @@ class Main extends Component {
                         <Header year={this.state.year} childsName={this.state.childsName} />
                     <Router>
                         <Route exact path="/">
-                            <Boxes key={this.state.everydaysdata.id} everydaysdata={this.state.everydaysdata} currentDate={this.state.currentDate} handleSelectedDay={this.handleSelectedDay} togglePopup={this.togglePopup.bind(this) } />
+                            <Boxes key={this.state.everydaysdata.id} everydaysdata={this.state.everydaysdata} currentDate={this.state.currentDate} handleSelectedDay={this.handleSelectedDay} />
                             {this.state.showPopup ?  
                                 <Popup  
                                     text={this.state.popupMessage}  
