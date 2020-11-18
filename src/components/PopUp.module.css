@@ -11,6 +11,10 @@
   }  
   .popupInner {  
     position: absolute;  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 3em;
     left: 20%;  
     right: 20%;  
     top: 20%;  
@@ -20,9 +24,12 @@
     border: 5px red solid; 
     background: rgba(255, 255, 255, 0.705);
     text-align: center;
-    padding-top: 15%;
+    padding: 15% 60px 50px 60px;
   }
 
   .popupInner button {
-    float: bottom;
+    display: flex;
+    width: 100px;
+    position: relative;
+    align-self: center;
   }
