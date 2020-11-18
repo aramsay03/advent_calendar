@@ -49,11 +49,3 @@ const DayBox = ({ daysdata, boxImgURL, currentDate, handleSelectedDay, currentDa
 }
  
 export default DayBox;
-
-// {this.state.showPopup ?  
-//     <Popup  
-//         text={this.state.popupMessage}  
-//         closePopup={this.togglePopup}  
-//     />  
-//     : null  
-// }

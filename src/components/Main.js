@@ -19,6 +19,7 @@ class Main extends Component {
             selectedDay: [],
             currentDayOpened: false,
             popupMessage: 'You will need to wait for that day',
+            popupImage: '../images/no-lego.png',
             showPopup: false
         }
 
@@ -34,7 +35,7 @@ class Main extends Component {
     handleSelectedDay = payload => {
         const boxDate = payload.Date;
         if ( moment(boxDate).isSameOrBefore(this.state.currentDate) === false ) {
-            this.setState( { popupMessage: 'You will need to wait for that day' } );
+            this.setState( { popupMessage: 'You will need to wait for that day', popupImage: '../images/no-lego.png'} );
             this.togglePopup();
         } else {
             this.setState( { selectedDay: payload } );
@@ -42,7 +43,7 @@ class Main extends Component {
     };
 
     handleCurrentDayOpened = () => {
-        this.setState( { popupMessage: 'Well done, Come back tomorrow to build some more'})
+        this.setState( { popupMessage: 'Well done, Come back tomorrow to build some more', popupImage: '../images/santa-claus.png'} )
         this.togglePopup();
         this.setState( { currentDayOpened: true });
     };
@@ -58,8 +59,9 @@ class Main extends Component {
                             <Boxes key={this.state.everydaysdata.id} everydaysdata={this.state.everydaysdata} currentDate={this.state.currentDate} handleSelectedDay={this.handleSelectedDay} />
                             {this.state.showPopup ?  
                                 <Popup  
-                                    text={this.state.popupMessage}  
-                                    closePopup={this.togglePopup}  
+                                    text={this.state.popupMessage}
+                                    popupImage={this.state.popupImage}
+                                    closePopup={this.togglePopup} 
                                 />  
                                 : null  
                             }

@@ -6,7 +6,7 @@ class Popup extends React.Component {
     return (  
       <div className={classes.popup}>  
         <div className={classes.popupInner}>
-          {/* ADD IMAGE IN HERE */}
+          <img alt="PopUp" src={this.props.popupImage} />
           <h1>{this.props.text}</h1>  
           <button onClick={this.props.closePopup}>CLOSE</button>  
         </div>  

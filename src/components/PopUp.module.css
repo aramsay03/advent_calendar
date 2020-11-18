@@ -24,12 +24,19 @@
     border: 5px red solid; 
     background: rgba(255, 255, 255, 0.705);
     text-align: center;
-    padding: 15% 60px 50px 60px;
+    padding: 50px 60px 50px 60px;
   }
 
   .popupInner button {
     display: flex;
     width: 100px;
+    position: relative;
+    align-self: center;
+  }
+
+  .popupInner img {
+    display: flex;
+    width: 200px;
     position: relative;
     align-self: center;
   }
