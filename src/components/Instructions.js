@@ -57,7 +57,6 @@ const Instructions = ({ selectedDay, markAsOpened }) => {
         <section className={classes.instructionsContainer}>
             <div className={classes.imageHeader}>
                 <h1>Section {section} of {selectedDay.numberOfSections}</h1>
-                {/* <p>{selectedDay.folder}</p> */}
             </div>
             <div className={classes.imageSection}>
                 <img src={imageURL} alt="InstructionImage" />
