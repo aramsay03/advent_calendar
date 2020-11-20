@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import classes from './Instructions.module.css';
+import Button from '@material-ui/core/Button';
+import NavigateNextIcon from '@material-ui/icons/NavigateNext';
+import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
 
 const Instructions = ({ selectedDay, markAsOpened }) => {
 
@@ -22,27 +25,39 @@ const Instructions = ({ selectedDay, markAsOpened }) => {
     }
 
     const backButtonClick = (
-        <button onClick={backSection}>
+        <Button onClick={backSection}
+        variant="contained"
+        color="red"
+        startIcon={<NavigateBeforeIcon />}>
             Back
-        </button>
+        </Button>
     );
 
     const backButton = (
-        <button>
+        <Button
+        variant="contained"
+        color="red"
+        startIcon={<NavigateBeforeIcon />}>
             Back
-        </button>
+        </Button>
     );
 
     const nextButtonClick = (
-        <button onClick={nextSection}>
-            Next
-        </button>
+        <Button onClick={nextSection}
+        variant="contained"
+        color="red"
+        endIcon={<NavigateNextIcon />}>
+        Next
+        </Button>
     );
 
     const nextButton = (
-        <button onClick={markAsOpened}>
+        <Button onClick={markAsOpened}
+        variant="contained"
+        color="red"
+        endIcon={<NavigateNextIcon />}>
             Next
-        </button>
+        </Button>
     );
 
     const ConditionalLinkBack = () => (section === 1)
