@@ -6,6 +6,14 @@ This year I desided to do the samething again, but this time using my new skills
 
 Built with ReactJS and hosted in a Docker container running on my server at home. The app will be available for him to use on a tablet.
 
+## Preview of the working app
+
+<video width="320" height="240" controls>
+  <source src="./readme_files/appdemo.mov" type="video/mp4">
+</video>
+
+<!-- ![App Demo Video](readme_files/my_video.mov) -->
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -1,10 +1,13 @@
 import React from 'react';
 import DayBox from './DayBox';
 import classes from './Boxes.module.css';
+import shuffle from 'shuffle-array';
 
 const Boxes = ({ everydaysdata, currentDate, handleSelectedDay }) => {
 
-    const daysNode = everydaysdata.map(daysdata => {
+    const shuffledDays = shuffle(everydaysdata)
+
+    const daysNode = shuffledDays.map(daysdata => {
         let randomNum = Math.floor(Math.random() * 10 + 1);
         const boxImage = `../images/gift${randomNum}.png`;
 
