@@ -19,5 +19,7 @@
 }
 
 .navButtons {
+    display: flex;
+    gap: 4em;
     padding: 2em;
 }
