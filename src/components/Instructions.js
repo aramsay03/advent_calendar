@@ -4,6 +4,7 @@ import classes from './Instructions.module.css';
 import Button from '@material-ui/core/Button';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
+// import ReactPlayer from 'react-player';
 
 const Instructions = ({ selectedDay, markAsOpened }) => {
 
@@ -15,6 +16,7 @@ const Instructions = ({ selectedDay, markAsOpened }) => {
 
     const [section, setSection] = useState(1);
     const imageURL = `./images/instructions/${selectedDay.folder}/${selectedDay.folder}-${section}.png`;
+    // const videoURL = selectedDay.videoLink;
 
     const backSection = () => {
         setSection(section - 1);
@@ -67,6 +69,10 @@ const Instructions = ({ selectedDay, markAsOpened }) => {
     const ConditionalLinkNext = () => (section >= selectedDay.numberOfSections)
     ? <Link to='/'>{nextButton}</Link>
     : <>{nextButtonClick}</>;
+
+    // const InstOrVideo = () => (selectedDay.folder === "day2")
+    // ? <ReactPlayer url={videoURL} />
+    // : <img src={imageURL} alt="InstructionImage" />;
 
     return (
         <section className={classes.instructionsContainer}>
