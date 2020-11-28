@@ -1,5 +1,6 @@
 import Main from './components/Main';
 import './App.css';
+import Snowflakes from './components/Snowflakes/Snowflakes';
 
 function App() {
 
@@ -10,6 +11,7 @@ function App() {
       backgroundRepeat: 'no-repeat',
       backgroundSize: 'cover'
     }}>
+      <Snowflakes />
       <Main />
     </div>
   );
