@@ -4,13 +4,30 @@ This is a project that was inspired for a Lego advent calendar I created for my 
 
 This year I desided to do the samething again, but this time using my new skills to create a simple app that will show him the sections to build for that day. It will also not let him view any days untill it is that day or has passed.
 
-Built with ReactJS and hosted in a Docker container running on my server at home. The app will be available for him to use on a tablet.
+Built with ReactJS and hosted on IONOS webhosting. The app will be available for him to use on a tablet.
 
+This project sparked a further digital advent calendar for the Scottish Tech Army, which I was asked to create and deploy within a week.
+
+<a href="https://github.com/aramsay03/STA-Advent-Calendar_2020">Scottish Tech Army Advent Calendar Repo</a>
+***
 ## Preview of the working app
+<a href="http://advent.aramsay.co.uk">Demo of the Calendar working</a> <br/>
+***
+## Some pictures of the non digital elements of the project.
+<br/>
+<div style="display:flex; flex-wrap:wrap;"><img height="200px" src="./readme_files/setbox.png" /><img height="200px" src="./readme_files/partsort.png" /><img height="200px" src="./readme_files/sortingparts.png" /><img height="200px" src="./readme_files/bagsfilled.png" /><img height="200px" src="./readme_files/stackofboxes.png" /><img height="200px" src="./readme_files/tablet.png" /><img height="200px" src="./readme_files/buildingday1.png" /></div><br/>
 
-<video width="320" height="240" controls>
+## The code requires a config.json file that looks like this:
+<img height="300px" src="./readme_files/config.png" />
+
+## The instruction image file structure looks like this:
+<img height="300px" src="./readme_files/filestructure.png" />
+
+***
+
+<!-- <video width="320" height="240" controls>
   <source src="./readme_files/appdemo.mov" type="video/mp4">
-</video>
+</video> -->
 
 <!-- ![App Demo Video](readme_files/my_video.mov) -->
 
@@ -45,42 +62,8 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
