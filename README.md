@@ -11,7 +11,7 @@ This project sparked a further digital advent calendar for the Scottish Tech Arm
 <a href="https://github.com/aramsay03/STA-Advent-Calendar_2020">Scottish Tech Army Advent Calendar Repo</a>
 ***
 ## Preview of the working app
-<a href="http://advent.aramsay.co.uk">Demo of the Calendar working</a> <br/>
+<a href="http://advent.aramsay.co.uk" target="_blank">Demo of the Calendar working</a> <br/>
 ***
 ## Some pictures of the non digital elements of the project.
 <br/>
